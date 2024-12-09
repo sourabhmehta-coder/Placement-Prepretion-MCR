@@ -1,0 +1,1321 @@
+
+  body {
+    overflow-x: hidden;
+  
+  }
+  * {
+    margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  .wrapper {
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    font-family: Georgia, serif;
+  
+  
+  }
+
+.dndmob{
+  display: none;
+}
+.onmobile-company{
+  display: none;
+}
+
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 70px;
+    background: black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+  }
+  nav .navbar{
+    height: 100%;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    /* background: red; */
+    padding: 0 50px;
+  }
+  .navbar .logo a{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav .navbar .nav-links{
+    line-height: 70px;
+    height: 100%;
+  }
+  nav .navbar .links{
+    display: flex;
+  }
+  nav .navbar .links li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 14px;
+  }
+  nav .navbar .links li a{
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .links li:hover .htmlcss-arrow,
+  .links li:hover .js-arrow{
+    transform: rotate(180deg);
+    }
+  nav .navbar .links li .arrow{
+    /* background: red; */
+    height: 100%;
+    width: 22px;
+    line-height: 70px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  nav .navbar .links li .sub-menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    line-height: 40px;
+    background:black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    display: none;
+    z-index: 2;
+  }
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: block;
+  }
+  .navbar .links li .sub-menu li{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .navbar .links li .sub-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .navbar .links li .sub-menu .more-arrow{
+    line-height: 40px;
+  }
+  /* .navbar .links li .htmlCss-more-sub-menu{
+    line-height: 40px;
+  } */
+  .navbar .links li .sub-menu .more-sub-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    z-index: 1;
+    display: none;
+  }
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: block;
+  }
+  .navbar .search-box{
+    position: relative;
+     height: 40px;
+    width: 40px;
+  }
+  .navbar .search-box i{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .navbar .search-box .input-box{
+    position: absolute;
+    right: calc(100% - 40px);
+    top: 80px;
+    height: 60px;
+    width: 300px;
+    background: #3E8DA8;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+  .navbar.showInput .search-box .input-box{
+    top: 65px;
+    opacity: 1;
+    pointer-events: auto;
+    background:black;
+  }
+  .search-box .input-box::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #3E8DA8;
+    right: 10px;
+    top: -6px;
+    transform: rotate(45deg);
+  }
+  .search-box .input-box input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    border: none;
+  }
+  .navbar .nav-links .sidebar-logo{
+    display: none;
+  }
+  .navbar .bx-menu{
+    display: none;
+  }
+
+  #pkp{
+    background-color: black;
+    color: #000;
+  }
+
+  .apply2{
+    border: 0.1rem solid #000 ;
+    height: 3rem;
+    width: 8rem;
+    margin-top: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    border-radius: 0.7rem;
+   align-content: center;
+  }
+  .apply2 h6{
+    padding-left: 2.5rem;
+  }
+  .apply2 a{
+    text-decoration: none;
+  }
+  .apply2:hover{
+    background-color: red;
+    border: 0.1rem solid red;
+    color:black;
+  }
+
+  
+
+  @media (max-width:700px) {
+    nav .navbar{
+      max-width: 100%;
+      padding: 0 25px;
+    }
+    nav .navbar .logo a{
+      font-size: 27px;
+    }
+    nav .navbar .links li{
+      padding: 0 10px;
+      white-space: nowrap;
+    }
+    nav .navbar .links li a{
+      font-size: 15px;
+    }
+  }
+  @media (max-width:700px){
+    /* nav{
+      position: relative;
+    } */
+    .navbar .bx-menu{
+      display: block;
+    }
+    nav .navbar .nav-links{
+      position: fixed;
+      top: 0;
+      left: -100%;
+      display: block;
+      max-width: 270px;
+      width: 100%;
+      background:  #3E8DA8;
+      line-height: 40px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+    .navbar .nav-links .sidebar-logo{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-logo .logo-name{
+      font-size: 25px;
+      color: #fff;
+    }
+      .sidebar-logo  i,
+      .navbar .bx-menu{
+        font-size: 25px;
+        color: #fff;
+      }
+    nav .navbar .links{
+      display: block;
+      margin-top: 20px;
+    }
+    nav .navbar .links li .arrow{
+      line-height: 40px;
+    }
+  nav .navbar .links li{
+      display: block;
+    }
+  nav .navbar .links li .sub-menu{
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    display: none;
+  }
+  nav .navbar .links li .sub-menu li{
+    border-bottom: none;
+  }
+  .navbar .links li .sub-menu .more-sub-menu{
+    display: none;
+    position: relative;
+    left: 0;
+  }
+  .navbar .links li .sub-menu .more-sub-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .links li:hover .htmlcss-arrow,
+  .links li:hover .js-arrow{
+    transform: rotate(0deg);
+    }
+    .navbar .links li .sub-menu .more-sub-menu{
+      display: none;
+    }
+    .navbar .links li .sub-menu .more span{
+      /* background: red; */
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+    }
+    .links li .sub-menu .more:hover .more-sub-menu{
+      display: none;
+    }
+    nav .navbar .links li:hover .htmlCss-sub-menu,
+    nav .navbar .links li:hover .js-sub-menu{
+      display: none;
+    }
+  .navbar .nav-links.show1 .links .htmlCss-sub-menu,
+    .navbar .nav-links.show3 .links .js-sub-menu,
+    .navbar .nav-links.show2 .links .more .more-sub-menu{
+        display: block;
+      }
+      .navbar .nav-links.show1 .links .htmlcss-arrow,
+      .navbar .nav-links.show3 .links .js-arrow{
+          transform: rotate(180deg);
+  }
+      .navbar .nav-links.show2 .links .more-arrow{
+        transform: rotate(90deg);
+      }
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 0;
+      }
+
+      .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+      .main img{
+        display: none;
+      }
+      .main .main-about h1{
+        font-size: 1.5rem;
+
+      }
+      .main .main-about p{
+        font-size: 1.5rem;
+      }
+      .study-plan{
+        display: flex;
+        flex-direction: column;
+      }
+      #sty h1{
+        font-size: 1.9rem;
+      }
+      .study-plan .paid-aptiutude .paid-aptiutudee2 .ppp{
+        font-size: 1.5rem;
+
+      }
+      .study-plan .paid-aptiutude .paid-aptiutudee2 p{
+        font-size: 0.5rem;
+        color: #fff;
+
+      }
+      .study-plan .paid-aptiutude .paid-aptiutudee2{
+        height: 5rem;
+        width: auto;
+
+      }
+      .study-plan .free-aptitude h3{
+      font-size: 1.5rem;
+    
+      }
+      .study-plan .free-aptitude p{
+        font-size: 1.2rem;
+        margin-right: 5rem;
+      }
+
+      .free-aptitude .free-aptitude-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+      }
+      .paid-aptiutude h3{
+        font-size: 1.5rem;
+     
+      }
+      .paid-aptiutude .paid-aptiutudee{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      #vol{
+      display: none;
+      }
+      .onmobile-company{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .onmobile-company .comph{
+    
+        height: 3rem;
+        width: 17rem;
+        background-color: #000;
+        color: white;
+        border: .2rem solid black;
+        border-radius: 0.8rem;
+        align-content: center;
+         margin: 1rem;
+
+      }
+      .onmobile-company .comph a{
+        text-decoration: none;
+        color: #fff;
+
+      }
+      .onmobile-company .comph h5{
+       padding-left: 4rem;
+      }
+  
+      #dndee{
+        display: none;
+      }
+      .dndmob{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+        margin: 3rem;
+      }
+
+
+      .reel .reel1{
+        display: none;
+
+      }
+      #reelsss{
+        display: none;
+      }
+
+    #ftr{
+      display:none;
+    }
+  
+     #cont{
+      display: none;
+
+     }
+     #pkp{
+      display: flex;
+      color: wheat;
+      text-decoration: none;
+      flex-direction: column;
+      background-color:black;
+  
+     }
+     #pkp h5{
+      margin-top: 3rem;
+      margin-left: 3rem;
+     }
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+  @media (max-width:370px){
+    nav .navbar .nav-links{
+    max-width: 100%;
+  } 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+  .main{
+    display: flex;
+    flex-direction:row ;
+  }
+
+  .main .main-about{
+    /* padding-left: 12rem; */
+    padding: 12rem;
+    font-size: 2rem;
+
+  }
+  .main img{
+    
+    height: 43.8rem;
+    width: 70rem;
+  }
+  .study-plan {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   }
+  .study-plan h1{
+    font-size: 5rem;
+    margin-top: 15rem;
+  }
+  .free-aptitude{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  .free-aptitude h3{
+    padding-left: 20rem;
+    font-weight: 400;
+    font-size: 3rem;
+  }
+  .free-aptitude p{
+    font-size: 1.5rem;
+    padding-left: 15rem;
+    font-weight: 200;
+
+  }
+  .free-aptitude-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+  }
+  .free-aptitude-content img{
+    height: 3rem;
+    width: 3rem;
+  }
+  .free-aptitude-quant{
+    display: flex;
+    flex-direction: row;
+    height: 7.5rem;
+    width: 15rem;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: black;
+    transition: background 0.3s,transform 0.3s;
+   
+  }
+  .free-aptitude-quant:hover{
+    background:yellow;
+    border: 0.1rem solid yellow;
+    
+
+  }
+
+  .free-aptitude-quant h5{
+    font-weight: 150;
+    font-size: 1rem;
+    padding:2.6rem 0rem 0rem 6rem;
+    color:white;
+  }
+  .free-aptitude-quant h5:hover{
+    font-weight: 200;
+    color: black;
+  }
+
+  .free-aptitude-reasoning{
+    display: flex;
+    flex-direction: row;
+    height: 7.5rem;
+    width: 15rem;
+    background-color: black;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+
+  }
+  .free-aptitude-reasoning:hover{
+    background:yellow;
+    border: 0.1rem solid yellow;
+    
+
+  }
+  .free-aptitude-reasoning h5{
+    font-weight: 150;
+    font-size: 1rem;
+    padding:2.6rem 0rem 0rem 6rem;
+    color:white;
+  }
+  .free-aptitude-reasoning h5:hover{
+    font-weight: 200;
+    color: black;
+  }
+
+  .free-aptitude-verbal{
+    display: flex;
+    flex-direction: row;
+    height: 7.5rem;
+    width: 15rem;
+    background-color: black;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+
+  }
+  .free-aptitude-verbal:hover{
+    background:yellow;
+    border: 0.1rem solid yellow;
+
+  }
+  .free-aptitude-verbal h5{
+    font-weight: 150;
+    font-size: 1rem;
+    padding:2.6rem 0rem 0rem 6rem;
+    color:white;
+  }
+  .free-aptitude-verbal h5:hover{
+    font-weight: 200;
+    color: black;
+
+  }
+  .free-aptitude-coading{
+    height: 7.5rem;
+    width: 15rem;
+    background-color: black;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+
+  }
+  .free-aptitude-coading:hover{
+    background:yellow;
+    border: 0.1rem solid yellow;
+
+  }
+  .free-aptitude-coading h5{
+    font-weight: 150;
+    font-size: 1rem;
+    padding:2.6rem 0rem 0rem 6rem;
+    color:white;
+  }
+  .free-aptitude-coading h5:hover{
+    font-weight: 200;
+    color: black;
+
+
+  }
+  .paid-aptiutude{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .paid-aptiutude h3{
+    padding-left: 11rem;
+    font-weight: 400;
+    font-size: 3rem;
+
+  }
+  .paid-aptiutude h4{
+    font-size:1rem ;
+    font-weight: 200;
+  }
+  .paid-aptiutudee{
+    display: flex;
+    flex-direction: row;
+  }
+  .paid-aptiutudee1{
+    height: 7.5rem;
+    width: 15rem;
+    background-color: black;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .paid-aptiutudee1:hover{
+    background:yellow;
+    border: 0.1rem solid yellow;
+
+  }
+  .paid-aptiutudee1 .course-link{
+    padding: 2rem ;
+    
+  }
+  .paid-aptiutudee1 .course-link a{
+    text-decoration: none;
+    color:white;
+
+  }
+  .paid-aptiutudee1 .course-link a:hover{
+    color: black;
+    font-weight: 200;
+  }
+  .paid-aptiutudee2{
+   
+    height: 7.5rem;
+    width: 39rem;
+    background-color: black;
+    border: 0.1rem solid black;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .paid-aptiutudee2:hover{
+    background:yellow;
+    color: white;
+    border: 0.1rem solid yellow;
+
+  }
+  .paid-aptiutudee2 .ppp{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 300;
+    color:white;
+    padding-left: 4rem;
+  }
+  .paid-aptiutudee2 .ppp:hover{
+    color: black;
+    font-weight: 200;
+  }
+  .paid-aptiutudee2 p{
+    font-size: 1.5rem;
+    font-weight: 80;
+    color:white;
+    padding-left: 4rem;
+
+  }
+  .paid-aptiutudee2 p{
+    color: black;
+    font-weight: 200;
+  }
+  .paid-aptiutude a{
+    text-decoration: none;
+
+  }
+  .companies{
+    margin-top: 8rem;
+  }
+.companies img{
+
+  z-index: -1;
+  height: 65rem;
+  width: 102rem;
+}
+
+.companies h5{
+  text-align: center;
+  font-size: 3rem;
+}
+.companies .tcs{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: 44rem;
+  left: 63rem;
+
+}
+.companies .tcs h2,.companies .wipro h2{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 20;
+
+}
+.companies .delloit h2{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 20;
+
+}
+.companies .sap h2 , .companies .accenture h2 , .companies .mahindra h2, .companies .infosys, .companies  .cognizant, .companies .hcl , .companies .ibm{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 20;
+}
+.companies .wipro{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: 38rem;
+  left: 25rem;
+}
+
+.companies .accenture{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: 51rem;
+  left: 13rem;
+
+}
+.companies .delloit{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: 50rem;
+  left: 69rem;
+
+}
+.companies .sap{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -5rem;
+  left: 3rem;
+
+}
+.companies .mahindra{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -8rem;
+  left: 22rem;
+
+}
+.companies .infosys{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -11rem;
+  left: 41rem;
+
+}
+.companies .cognizant{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -14rem;
+  left: 59rem;
+
+}
+.companies .hcl{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -17rem;
+  left: 78rem;
+
+}
+.companies .ibm{
+  height: 3rem;
+  width: 17rem;
+  border: .2rem solid black;
+  border-radius: 0.8rem;
+  z-index: +1;
+  position: relative;
+  top: -15rem;
+  left: 35rem;
+
+
+}
+ .companies .mahindra:hover{
+  background-color: black;
+  color:white;
+  
+}
+.companies .wipro:hover{
+  background-color: black;
+  color:white;
+}
+.companies .sap:hover{
+  background-color: black;
+  color:white;
+}
+.companies .tcs:hover{
+  background-color: black;
+  color:white;
+}
+.companies .delloit:hover{
+  background-color: black;
+  color:white;
+}
+.companies .accenture:hover{
+  background-color: black;
+  color:white;
+} 
+.companies .mahindra:hover{
+  background-color: black;
+  color:white;
+} 
+.companies .infosys:hover{
+  background-color: black;
+  color:white;
+} 
+.companies .cognizant:hover{
+  background-color: black;
+  color:white;
+} 
+.companies .hcl:hover{
+  background-color: black;
+  color:white;
+} .companies .ibm:hover{
+  background-color: black;
+  color:white;
+} 
+.dnd{
+  width:225vh;
+  height: 130vh;
+  background-color: #000;
+  display: flex;
+  gap: 4rem;
+  flex-direction: row;
+  z-index: -1;
+}
+
+.dnd .does img{
+
+  padding: 2rem 0rem 0rem 12rem;
+}
+.dnd .dont img{
+  border-left: .5rem solid rgb(0, 0, 0);
+  padding: 2rem 0rem 0rem 12rem;
+  
+  
+}
+.dose-para{
+  margin-top: 3rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* letter-spacing: 0.1rem; */
+  
+}
+.dnd .does .dose-para h1 { 
+  color:yellow;
+}
+.dnd .does .dose-para p{
+  font-size: 1.5rem;
+  color: white;
+}
+.dnd .dont .dont-para h1 { 
+  color:yellow;
+}
+.dont{
+  border-left: .5rem solid white;
+  /* padding: 2rem 0rem 0rem 12rem; */
+  
+
+}
+.dont-para{
+ 
+  margin-top: 3rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* letter-spacing: 0.1rem; */
+  
+}
+.reel{
+  border: 0.5rem solid black;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 9rem;
+  margin-left: 1.8rem;
+}
+.footer{
+  margin-top: 10rem;
+  width: 220vh;
+  height: 70vh;
+  color: white;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-content:center ;
+
+
+}
+.footer .footer-learn{
+  padding-top: 3rem;
+  margin-left: 10rem;
+
+
+}
+.footer-learn h4:hover{
+  color: yellow;
+}
+.footer .footer-companies{
+  padding-top: 3rem;
+  margin-left: 20rem;
+}
+.footer-companies h4:hover{
+  color: yellow;
+}
+.footer .footer-image{
+  padding-top: 3rem;
+  padding-left: 35rem;
+  height: 4rem;
+  width: 12rem;
+}
+.footer .footer-image img{
+  height: 5rem;
+  width: 15rem;
+}
+.footer-end{
+  border-top: 0.1rem solid white;
+  background-color: black;
+  color: white;
+  width: 220vh;
+  height:30vh;
+  display: flex;
+  flex-direction: row;
+}
+.footer-end h5{
+  margin-top: 3rem;
+  margin-left: 2rem;
+  font-size: 0.2rem;
+  font-weight: 20;
+}
+.footer-end .footer-end-about{
+  margin-left: 55rem;
+  
+
+}
+.footer-end-about{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.footer-end-about .footer-end-about-name{
+margin-top: 1.8rem;
+}
+
+
+
+/* --------------------------TCS------------------------------------------------------------------------------------ */
+
+#tcs{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+#tcs .about-tcs h1{
+  font-size: 4rem;
+  font-weight: 600;
+  padding-left: 38rem;
+}
+#tcs .apply{
+  padding-left: 36rem;
+}
+#tcs .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+
+#tcs .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* -----------------------------------------WIPRO---------------------------- */
+
+#wipro2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#wipro2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#Wipro2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* ----------------------Accenture------------------------------------------- */
+
+
+#accenture2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#accenture2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#accenture2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* -----------------------------------------tech mahindra----------------- */
+#mahindra2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#mahindra2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#mahindra2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* -----------------------------------------------Cognizent------------------------ */
+#cognizent2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#cognizent2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#cognizent2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* ----------------------------------------Delloite---------------------------------------- */
+#delloite2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#delloite2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#delloite2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+/* ------------------------------HCL------------------------------ */
+#hcl2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#hcl2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#hcl2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+
+/* --------------------------------------IBM----------------------------------- */
+
+#ibm2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#ibm2 .apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#ibm2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+
+/* ----------------------------infosys--------------------------------------------- */
+#infosys2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+}
+
+#infosys2.apply button{
+  border: 0.1rem solid #000 ;
+  height: 3rem;
+  width: 8rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-radius: 0.7rem;
+}
+#infosys2 .apply button:hover{
+  background-color: red;
+  border: 0.1rem solid red;
+  color:black;
+}
+
+
+/* ---------------------------------------------coading------------------------------ */
+#coading{
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 5rem; */
+  align-items: center;
+}
+
+/* -------------------------resource------------- */
+#resourse{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  align-items: center;
+
+
+}
